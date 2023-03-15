@@ -13,12 +13,15 @@ const bollywoodMovies = [
     { title: 'Dil', director: 'Indra Kumar', year: 1990, rating: 7.8 }
   ];
 
-  const getBestOldBollywoodMovies = arr => arr.filter(movie => (movie.year<1990 && movie.rating>8.0))
-                                                .map(movie => (movie.title));
+//   const getBestOldBollywoodMovies = arr => arr.filter(movie => (movie.year<1990 && movie.rating>8.0))
+//                                                 .map(movie => (movie.title));
 
-//   const getBestOldBollywoodMovies = arr => arr.reduce((onlyname,movie)=>{
-//     const movieFilter = arr.
-//   },[])                                          
+  const getBestOldBollywoodMovies = arr => arr.reduce((onlyname,movie)=>{
+    if(movie.year<1990 && movie.rating>8.0){
+        onlyname.push(movie.title);
+    }
+    return onlyname;
+  },[])                                          
 
   const bestOldMovies = getBestOldBollywoodMovies(bollywoodMovies);
 console.log(bestOldMovies); // Output: ['Sholay', 'Parinda']
