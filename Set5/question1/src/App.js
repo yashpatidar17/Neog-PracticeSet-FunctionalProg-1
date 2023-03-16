@@ -18,7 +18,7 @@ function App() {
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
-            {movie.title}: ({movie.director})
+            {movie.title}: {movie.director}
           </li>
         ))}
       </ul>
