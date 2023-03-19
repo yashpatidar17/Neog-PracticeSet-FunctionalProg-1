@@ -14,7 +14,7 @@ const employees = [
 
 function App() {
   return (
-    <div className="App">
+    <>
     <h1>Employees</h1>
       <ul>
         {employees.map(item => (
@@ -23,7 +23,7 @@ function App() {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 
